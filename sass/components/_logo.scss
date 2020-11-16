@@ -1,0 +1,20 @@
+.logo {
+  text-decoration: none;
+  font-family: Raleway;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: black;
+  margin-right: 88px;
+  margin-top: 24px;
+  margin-bottom: 25px;
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 92px;
+  }
+
+  & span {
+    color: #2196f3;
+  }
+}

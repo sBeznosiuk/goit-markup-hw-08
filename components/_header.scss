@@ -1,0 +1,110 @@
+.page-header {
+  background-color: #fff;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border: 1px solid #ececec;
+}
+.main-nav {
+  display: flex;
+}
+
+.site-nav,
+.site-nav .item + .item {
+  margin-left: 50px;
+}
+.site-nav {
+  background-color: getColor('primary-white');
+  list-style: none;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  margin-left: 0;
+
+  .link {
+    text-align: center;
+    display: block;
+    color: getColor('primary');
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    padding-bottom: 32px;
+    padding-top: 32px;
+    position: relative;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:active {
+      opacity: 1;
+    }
+    &:hover,
+    &:focus {
+      color: getColor('accent');
+    }
+  }
+  .item {
+    display: flex;
+    align-items: center;
+  }
+  .site-nav-list {
+    @extend .site-nav;
+  }
+}
+.link.current-page {
+  &:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 4px;
+    background-color: getColor('accent');
+    border-radius: 2px;
+    bottom: 0;
+    left: 0;
+    transform: translateY(25%);
+  }
+}
+.cont-nav .item + .item {
+  margin-left: 30px;
+}
+.cont-nav {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.cont-nav .link {
+  display: flex;
+  text-decoration: none;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  color: getColor('secondary');
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    color: getColor('accent');
+  }
+}
+.header-icon {
+  max-height: 16px;
+  max-width: 16px;
+  margin: 0px;
+  margin-right: 10px;
+  fill: getColor('secondary');
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  .link:hover & {
+    fill: getColor('accent');
+  }
+}
