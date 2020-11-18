@@ -13,6 +13,11 @@ body {
   background-color: #fff;
   color: getColor('primary');
 }
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 .link {
   text-decoration: none;
 }

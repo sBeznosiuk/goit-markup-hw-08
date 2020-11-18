@@ -146,6 +146,7 @@
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  width: 370px;
 }
 
 .text-container {
@@ -1032,6 +1033,12 @@
   }
 }
 
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url(../images/hero-bg@2x.jpg);
+  }
+}
+
 .hero .title {
   margin-top: 0;
   margin-bottom: 30px;
@@ -1113,6 +1120,7 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 99999;
+  overflow-y: scroll;
   -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1842,6 +1850,12 @@ body {
   text-decoration: none;
   background-color: #fff;
   color: #212121;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .link {

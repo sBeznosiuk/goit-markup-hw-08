@@ -28,6 +28,12 @@
   background-repeat: no-repeat;
   background-position: center;
 
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url(../images/hero-bg@2x.jpg);
+  }
+
   .title {
     margin-top: 0;
     margin-bottom: 30px;
